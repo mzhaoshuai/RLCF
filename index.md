@@ -8,14 +8,14 @@ layout: home
 <div align="center">
 # Test-Time Adaptation with CLIP Reward for Zero-Shot Generalization in Vision-Language Models
 
-### [Shuai Zhao]()<sup>1,2</sup>, [Xiaohan Wang](https://scholar.google.com/citations?user=iGA10XoAAAAJ&hl=en-US)<sup>1</sup>, [Linchao Zhu](http://ffmpbgrnn.github.io/)<sup>1</sup>, [Yi Yang](https://scholar.google.com/citations?user=RMSuNFwAAAAJ&hl=en)<sup>1</sup>
+### [Shuai Zhao](https://github.com/mzhaoshuai)<sup>1,2</sup>, [Xiaohan Wang](https://scholar.google.com/citations?user=iGA10XoAAAAJ&hl=en-US)<sup>1</sup>, [Linchao Zhu](http://ffmpbgrnn.github.io/)<sup>1</sup>, [Yi Yang](https://scholar.google.com/citations?user=RMSuNFwAAAAJ&hl=en)<sup>1</sup>
 ### <sup>1</sup> ReLER Lab, CCAI, Zhejiang University, <sup>2</sup> Baidu Inc.
 ### [<ins>paper</ins>]()
 <!-- ### [<ins>paper</ins>]() &nbsp; [<ins>code</ins>](https://github.com/azshue/TPT) -->
 </div>
 
 <p><strong><em>Abstract</em></strong>: 
-  Misalignment between the outputs of a vision-language (VL) model and task goal hinders its deployment. This issue can worsen when there are distribution shifts between the training and test data. To address this problem, prevailing fully test-time adaptation~(TTA) methods bootstrap themselves through entropy minimization.
+  Misalignment between the outputs of a vision-language (VL) model and task goal hinders its deployment. This issue can worsen when there are distribution shifts between the training and test data. To address this problem, prevailing fully test-time adaptation (TTA) methods bootstrap themselves through entropy minimization.
   However, minimizing the entropy of the predictions makes the model overfit to incorrect output distributions of itself.
   <strong>In this work, we propose TTA with feedback to avoid such overfitting and align the model with task goals.</strong>
   <strong>Specifically, we adopt CLIP as reward model to provide feedback</strong> for VL models during test time in various tasks, including image classification, image-text retrieval, and image captioning.
