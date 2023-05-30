@@ -10,8 +10,8 @@ layout: home
 
 ### [Shuai Zhao](https://github.com/mzhaoshuai)<sup>1,2</sup>, [Xiaohan Wang](https://scholar.google.com/citations?user=iGA10XoAAAAJ&hl=en-US)<sup>1</sup>, [Linchao Zhu](http://ffmpbgrnn.github.io/)<sup>1</sup>, [Yi Yang](https://scholar.google.com/citations?user=RMSuNFwAAAAJ&hl=en)<sup>1</sup>
 ### <sup>1</sup> ReLER Lab, CCAI, Zhejiang University, <sup>2</sup> Baidu Inc.
-### [<ins>paper</ins>]()
-<!-- ### [<ins>paper</ins>]() &nbsp; [<ins>code</ins>](https://github.com/azshue/TPT) -->
+### [<ins>paper</ins>](https://arxiv.org/abs/2305.18010)
+<!-- ### [<ins>paper</ins>]() &nbsp; [<ins>code</ins>]() -->
 </div>
 
 <p><strong><em>Abstract</em></strong>: 
