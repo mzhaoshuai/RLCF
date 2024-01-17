@@ -29,8 +29,8 @@ improving the zero-shot generalization capacity of VLMs.
 According to the characteristics of these VL tasks, we build different fully TTA pipelines with RLCF to improve the zero-shot generalization ability of various VLMs.
 Extensive experiments along with promising
 empirical results demonstrate the effectiveness of RLCF.
-</div>
 <br /><br /></p>
+</div>
 
 
 <h2 id="rlcf"><strong>Reinforcement learning with CLIP feedback</strong></h2>
