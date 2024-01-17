@@ -15,13 +15,19 @@ layout: home
 </div>
 
 <p><strong><em>Abstract</em></strong>: 
-  Misalignment between the outputs of a vision-language (VL) model and task goal hinders its deployment. This issue can worsen when there are distribution shifts between the training and test data. To address this problem, prevailing fully test-time adaptation (TTA) methods bootstrap themselves through entropy minimization.
-  However, minimizing the entropy of the predictions makes the model overfit to incorrect output distributions of itself.
-  <strong>In this work, we propose TTA with feedback to avoid such overfitting and align the model with task goals.</strong>
-  <strong>Specifically, we adopt CLIP as reward model to provide feedback</strong> for VL models during test time in various tasks, including image classification, image-text retrieval, and image captioning.
-  Given a single test sample, the model aims to maximize CLIP reward through reinforcement learning. We adopt a reward design with the average CLIP score of sampled
-  candidates as the baseline. This design is simple and surprisingly effective when combined with various task-specific sampling strategies. The entire system is flexible, allowing the reward model to be extended with multiple CLIP models.
-  Plus, a momentum buffer can be used to memorize and leverage the learned knowledge from multiple test samples. Extensive experiments demonstrate that our method significantly improves different VL models after TTA.
+One fascinating aspect of pre-trained vision-language models~(VLMs) learning under language supervision is their impressive zero-shot generalization capability.
+However, this ability is hindered by distribution shifts between the training and testing data.
+Previous test time adaptation~(TTA) methods for VLMs in zero-shot classification rely on minimizing the entropy of model outputs, tending to be stuck in incorrect model predictions.
+In this work, we propose TTA with feedback to rectify the model output and prevent the model from becoming blindly confident.
+Specifically, a CLIP model is adopted as the reward model during TTA and provides feedback for the VLM.
+Given a single test sample,
+the VLM is forced to maximize the CLIP reward between the input and sampled results from the VLM output distribution.
+The proposed \textit{reinforcement learning with CLIP feedback~(RLCF)} framework is highly flexible and universal.
+Beyond the classification task, with task-specific sampling strategies and a proper reward baseline choice, RLCF can be easily extended to not only discrimination tasks like retrieval but also generalization tasks like image captioning,
+improving the zero-shot generalization capacity of VLMs.
+According to the characteristics of these VL tasks, we build different fully TTA pipelines with RLCF to improve the zero-shot generalization ability of various VLMs.
+Extensive experiments along with promising
+empirical results demonstrate the effectiveness of RLCF.
 <br /><br /></p>
 
 
@@ -170,11 +176,11 @@ In Figure 7, as the process progresses, captions aligned with preferences of CLI
 
 <h2 id="citation">Citation</h2>
 <p>If you find our work useful, please consider citing:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{zhao2023rlcf
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{zhao2024rlcf
     title={Test-Time Adaptation with CLIP Reward for Zero-Shot Generalization in Vision-Language Models},
     author={Shuai, Zhao and Xiaohan, Wang and Linchao, Zhu and Yi, Yang},
-    journal={arXiv preprint},
-    year={2023}
+    booktitle={ICLR},
+    year={2024}
 }
 </code></pre></div></div>
 
