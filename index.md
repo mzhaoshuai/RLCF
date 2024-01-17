@@ -8,12 +8,13 @@ layout: home
 <div align="center">
 # Test-Time Adaptation with CLIP Reward for Zero-Shot Generalization in Vision-Language Models
 
-### [Shuai Zhao](https://github.com/mzhaoshuai)<sup>1,2</sup>, [Xiaohan Wang](https://scholar.google.com/citations?user=iGA10XoAAAAJ&hl=en-US)<sup>1</sup>, [Linchao Zhu](http://ffmpbgrnn.github.io/)<sup>1</sup>, [Yi Yang](https://scholar.google.com/citations?user=RMSuNFwAAAAJ&hl=en)<sup>1</sup>
-### <sup>1</sup> ReLER Lab, CCAI, Zhejiang University, <sup>2</sup> Baidu Inc.
-### [<ins>paper</ins>](https://arxiv.org/abs/2305.18010)
-<!-- ### [<ins>paper</ins>]() &nbsp; [<ins>code</ins>]() -->
+### [Shuai Zhao](https://github.com/mzhaoshuai)<sup>1,3</sup>, [Xiaohan Wang](https://scholar.google.com/citations?user=iGA10XoAAAAJ&hl=en-US)<sup>2</sup>, [Linchao Zhu](http://ffmpbgrnn.github.io/)<sup>2</sup>, [Yi Yang](https://scholar.google.com/citations?user=RMSuNFwAAAAJ&hl=en)<sup>2</sup>
+### <sup>1</sup> ReLER Lab, AAII, University of Technology Sydney, <sup>1</sup> ReLER Lab, CCAI, Zhejiang University, <sup>3</sup> Baidu Inc.
+<!-- ### [<ins>paper</ins>](https://openreview.net/forum?id=kIP0duasBb) -->
+### [<ins>paper</ins>](https://openreview.net/forum?id=kIP0duasBb) &nbsp; [<ins>code</ins>](https://github.com/mzhaoshuai/RLCF)
 </div>
 
+<div align="justify">
 <p><strong><em>Abstract</em></strong>: 
 One fascinating aspect of pre-trained vision-language models~(VLMs) learning under language supervision is their impressive zero-shot generalization capability.
 However, this ability is hindered by distribution shifts between the training and testing data.
@@ -22,12 +23,13 @@ In this work, we propose TTA with feedback to rectify the model output and preve
 Specifically, a CLIP model is adopted as the reward model during TTA and provides feedback for the VLM.
 Given a single test sample,
 the VLM is forced to maximize the CLIP reward between the input and sampled results from the VLM output distribution.
-The proposed \textit{reinforcement learning with CLIP feedback~(RLCF)} framework is highly flexible and universal.
+The proposed <strong>reinforcement learning with CLIP feedback~(RLCF)</strong> framework is highly flexible and universal.
 Beyond the classification task, with task-specific sampling strategies and a proper reward baseline choice, RLCF can be easily extended to not only discrimination tasks like retrieval but also generalization tasks like image captioning,
 improving the zero-shot generalization capacity of VLMs.
 According to the characteristics of these VL tasks, we build different fully TTA pipelines with RLCF to improve the zero-shot generalization ability of various VLMs.
 Extensive experiments along with promising
 empirical results demonstrate the effectiveness of RLCF.
+</div>
 <br /><br /></p>
 
 
