@@ -1,0 +1,33 @@
+ # Copyright (c) 2022, salesforce.com, inc.
+ # All rights reserved.
+ # SPDX-License-Identifier: BSD-3-Clause
+ # For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+
+datasets:
+  flickr30k:
+    # data_dir: ${env.data_dir}/datasets
+    ### Remember to change data_dir to /YOUR/PATH ###
+    data_dir: /home/shuzhao/Data/dataset
+    data_type: images
+
+    build_info:
+      annotations:
+        train:
+          # url: https://storage.googleapis.com/sfr-vision-language-research/datasets/flickr30k_train.json
+          # storage: flickr30k/annotations/train.json
+          url: ${datasets.flickr30k.data_dir}/flickr30k/annotations/flickr30k_train.json
+          storage: ${datasets.flickr30k.data_dir}/flickr30k/annotations/flickr30k_train.json
+        val:
+          # url: https://storage.googleapis.com/sfr-vision-language-research/datasets/flickr30k_val.json
+          # storage: flickr30k/annotations/val.json
+          url: ${datasets.flickr30k.data_dir}/flickr30k/annotations/flickr30k_val.json
+          storage: ${datasets.flickr30k.data_dir}/flickr30k/annotations/flickr30k_val.json
+        test:
+          # url: https://storage.googleapis.com/sfr-vision-language-research/datasets/flickr30k_test.json
+          # storage: flickr30k/annotations/test.json
+          url: ${datasets.flickr30k.data_dir}/flickr30k/annotations/flickr30k_test.json
+          storage: ${datasets.flickr30k.data_dir}/flickr30k/annotations/flickr30k_test.json
+      images:
+          # storage: flickr30k/images
+          # storage: /export/share/datasets/vision/flickr30k
+          storage: ${datasets.flickr30k.data_dir}/flickr30k
