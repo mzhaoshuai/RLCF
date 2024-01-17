@@ -178,7 +178,7 @@ In Figure 7, as the process progresses, captions aligned with preferences of CLI
 
 <h2 id="citation">Citation</h2>
 <p>If you find our work useful, please consider citing:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{zhao2024rlcf
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{zhao2024rlcf,
     title={Test-Time Adaptation with CLIP Reward for Zero-Shot Generalization in Vision-Language Models},
     author={Shuai, Zhao and Xiaohan, Wang and Linchao, Zhu and Yi, Yang},
     booktitle={ICLR},
