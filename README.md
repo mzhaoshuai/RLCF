@@ -1,4 +1,4 @@
-# Test-Time Adaptation with CLIP Reward :sparkles:
+# Reinforcement Learning with CLIP Feedback :sparkles:
 <!-- :sparkles: -->
 
 The official implementation of [Test-Time Adaptation with CLIP Reward for Zero-Shot Generalization in Vision-Language Models](https://openreview.net/forum?id=kIP0duasBb).
@@ -8,6 +8,7 @@ The official implementation of [Test-Time Adaptation with CLIP Reward for Zero-S
 
 <!--ts-->
 * [Introduction](#Introduction)
+* [Features](#Features)
 * [Installation](#Installation)
 * [Classification](#Classification)
 * [Retrieval](#Retrieval)
@@ -15,6 +16,10 @@ The official implementation of [Test-Time Adaptation with CLIP Reward for Zero-S
 * [Citations](#Citations)
 * [Acknowledgements](#Acknowledgements)
 <!--te-->
+
+## News
+
+- [17/01/2024] repo online.
 
 
 ## Introduction
@@ -41,6 +46,13 @@ empirical results demonstrate the effectiveness of RLCF.
 </div>
 
 
+## Features
+
+- [x] TTA for CLIP OOD classification with RLCF. Prompt tuning + backbone tuning.
+- [x] TTA for CLIP retrieval with RLCF.
+- [x] Training and TTA for ClipCap and CapDec.
+
+
 ## Installation
 
 The code in this repo about the three tasks are independent. You can step up them task by task.
@@ -56,14 +68,17 @@ First of all, you need to download the dataset and pre-trained models.
   * [ImageNet-R](https://github.com/hendrycks/imagenet-r)
   * [ImageNet-V2](https://huggingface.co/datasets/vaishaal/ImageNetV2/tree/main)
   * [ImageNet-Sketch](https://github.com/HaohanWang/ImageNet-Sketch)
+  * The code also supports fine-grained datasets used in TPT and ImageNet-C.
 
 - Retrieval dataset (credit on [salesforce/LAVIS](https://github.com/salesforce/LAVIS/blob/main/dataset_card/coco_retrieval.md))
   * [coco2014](https://github.com/salesforce/LAVIS/blob/main/dataset_card/coco_retrieval.md)
   * [flickr30k](https://github.com/salesforce/LAVIS/blob/main/dataset_card/flickr_retrieval.md)
+  * [annotations-files](https://github.com/mzhaoshuai/RLCF/releases/download/0.0.1/annotations.zip)
 
 - Captioning dataset
   * [coco2014](https://github.com/salesforce/LAVIS/blob/main/dataset_card/coco_caption.md)
   * [nocaps](https://nocaps.org/download)
+  * [annotations-files](https://github.com/mzhaoshuai/RLCF/releases/download/0.0.1/annotations.zip)
 
 - weights of pre-trained models:
     - [CLIP-ViT-B/32](https://openaipublic.azureedge.net/clip/models/40d365715913c9da98579312b702a82c18be219cc2a73407c4526f58eba950af/ViT-B-32.pt)
@@ -72,11 +87,12 @@ First of all, you need to download the dataset and pre-trained models.
     - [RN50x64](https://openaipublic.azureedge.net/clip/models/be1cfb55d75a9666199fb2206c106743da0f6468c9d327f3e0d0a543a9919d9c/RN50x64.pt)
     - [facebook/opt-125m](https://huggingface.co/facebook/opt-125m)
     - [CoOp Weights](https://drive.google.com/file/d/18ypxfd82RR0pizc5MM1ZWDYDk4j0BtPF/view)
-    - [weights-of-ClipCap](TODO) Put them at the `${ROOT}/output`.
-    - [weights-of-CapDec](TODO) Put them at the `${ROOT}/output`.
+    - [weights-of-ClipCap](https://github.com/mzhaoshuai/RLCF/releases/download/0.0.1/capdec_opt125m_transformer_coco_01.zip) Put them at the `${ROOT}/output`.
+    - [weights-of-CapDec](https://github.com/mzhaoshuai/RLCF/releases/download/0.0.1/clipcap_opt125m_transformer_coco_01.zip) Put them at the `${ROOT}/output`.
 
 - For convenient, you can also download all the datasets at BaiduYunPan. Please only use for research or education purposes.
   * [BaiduYunPan RLCF](https://pan.baidu.com/s/1HStpgyMFLYUjgJLh6ZI14w?pwd=d653), code is `d653`.
+
 
 Generally, directories are organized as follows:
 ```
@@ -211,6 +227,10 @@ bash tta_clipcap_c2n.sh 0
 bash train_capdec_coco.sh 0
 bash train_clipcap_coco.sh 0
 ```
+You need to download the [CLIP-features-for-coco](https://github.com/mzhaoshuai/RLCF/releases/download/0.0.1/COCO_train_set_image_text_vitb16_v2.zip) or [CLIP-features-for-flikcr](https://github.com/mzhaoshuai/RLCF/releases/download/0.0.1/flickr_train_set_image_text_vitb16_v2.zip) before training.
+
+
+- For the evaluation of captioning results, we adopt the scripts from `clipscore`. It includes `Bleu`, `Meteor`, `Rouge`, `Cider`, `CLIPScore`. If you want to get `Spice`, try to uncomment line25 in `clipscore/generation_eval_utils.py`.
 
 
 ## Citations
