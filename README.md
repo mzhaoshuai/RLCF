@@ -235,11 +235,13 @@ You need to download the [CLIP-features-for-coco](https://github.com/mzhaoshuai/
 
 ## Citations
 ```
-@inproceedings{zhao2024rlcf,
-    title={Test-Time Adaptation with CLIP Reward for Zero-Shot Generalization in Vision-Language Models},
-    author={Shuai, Zhao and Xiaohan, Wang and Linchao, Zhu and Yi, Yang},
-    booktitle={ICLR},
-    year={2024}
+@inproceedings{
+zhao2024testtime,
+title={Test-Time Adaptation with {CLIP} Reward for Zero-Shot Generalization in Vision-Language Models},
+author={Shuai Zhao and Xiaohan Wang and Linchao Zhu and Yi Yang},
+booktitle={The Twelfth International Conference on Learning Representations},
+year={2024},
+url={https://openreview.net/forum?id=kIP0duasBb}
 }
 ```
 
