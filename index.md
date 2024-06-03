@@ -9,7 +9,7 @@ layout: home
 # Test-Time Adaptation with CLIP Reward for Zero-Shot Generalization in Vision-Language Models
 
 ### [Shuai Zhao](https://github.com/mzhaoshuai)<sup>1,3</sup>, [Xiaohan Wang](https://scholar.google.com/citations?user=iGA10XoAAAAJ&hl=en-US)<sup>2</sup>, [Linchao Zhu](http://ffmpbgrnn.github.io/)<sup>2</sup>, [Yi Yang](https://scholar.google.com/citations?user=RMSuNFwAAAAJ&hl=en)<sup>2</sup>
-### <sup>1</sup> ReLER Lab, AAII, University of Technology Sydney, <sup>1</sup> ReLER Lab, CCAI, Zhejiang University, <sup>3</sup> Baidu Inc.
+### <sup>1</sup> ReLER Lab, AAII, University of Technology Sydney, <sup>2</sup> ReLER Lab, CCAI, Zhejiang University, <sup>3</sup> Baidu Inc.
 <!-- ### [<ins>paper</ins>](https://openreview.net/forum?id=kIP0duasBb) -->
 ### [<ins>paper</ins>](https://openreview.net/forum?id=kIP0duasBb) &nbsp; [<ins>code</ins>](https://github.com/mzhaoshuai/RLCF)
 </div>
