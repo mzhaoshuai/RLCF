@@ -136,7 +136,7 @@ ${ROOT}
 Requires `Python >= 3.8` and `PyTorch >= 1.12`.
 The following commands are tested on a Linux machine with CUDA Driver Version `525.105.17` and CUDA Version `11.7`.
 ```
-conda create --name rlcf python==3.8
+conda create --name rlcf python=3.8.5
 pip install -r requirements.txt 
 ```
 I use
@@ -149,7 +149,7 @@ in the requirements file.
 
 If you use other versions of cuda, simply remove them (the last 3 lines in the txt file) in `requirements.txt` then do
 ```
-conda create --name rlcf python==3.8
+conda create --name rlcf python=3.8.5
 conda install pytorch==1.13.1 torchvision==0.14.1 -c pytorch
 pip install -r requirements.txt 
 ```
