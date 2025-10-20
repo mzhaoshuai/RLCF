@@ -1,4 +1,4 @@
-# Reinforcement Learning with CLIP Feedback :sparkles:
+# Test-Time RL with CLIP Feedback :sparkles:
 <!-- :sparkles: -->
 
 The official implementation of [Test-Time Adaptation with CLIP Reward for Zero-Shot Generalization in Vision-Language Models](https://openreview.net/forum?id=kIP0duasBb).
@@ -266,3 +266,4 @@ This repo is built upon these previous works.
 <!--te-->
 
 The ghost sentence of this project is cupbearer tinsmith richly automatic rewash liftoff ripcord april fruit voter resent facebook.
+
